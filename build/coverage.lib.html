@@ -1,5 +1,7 @@
-<html lang="en"><head>
-    <title>Code coverage report for node-npmtest-gulp-livereload/gulp-livereload/index.js</title>
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for node-npmtest-gulp-livereload/node_modules/gulp-livereload/index.js</title>
     <meta charset="utf-8">
     <style>
         body, html {
@@ -192,7 +194,7 @@
     <h1 style="font-weight: bold;">
         <a href="https://github.com/npmtest/node-npmtest-gulp-livereload">npmtest-gulp-livereload (v0.0.1)</a>
     </h1>
-    <h1>Code coverage report for <span class="entity">node-npmtest-gulp-livereload/gulp-livereload/index.js</span></h1>
+    <h1>Code coverage report for <span class="entity">node-npmtest-gulp-livereload/node_modules/gulp-livereload/index.js</span></h1>
     <h2>
         
         Statements: <span class="metric">31.91% <small>(15 / 47)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -208,11 +210,11 @@
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../index.html">All files</a> » <a href="index.html">node-npmtest-gulp-livereload/gulp-livereload/</a> » index.js</div>
+    <div class="path"><a href="../../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-gulp-livereload/node_modules/gulp-livereload/</a> &#187; index.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tbody><tr><td class="line-count">1
+<tr><td class="line-count">1
 2
 3
 4
@@ -536,18 +538,18 @@ var options = {
  * @param [opts.quiet=false]
  */
 &nbsp;
-module.exports = exports = <span class="fstat-no" title="function not covered">function(opts) {</span>
-<span class="cstat-no" title="statement not covered">  options = _assign(options, opts);</span>
+module.exports = exports = <span class="fstat-no" title="function not covered" >function(opts) {</span>
+<span class="cstat-no" title="statement not covered" >  options = _assign(options, opts);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">  var glr = es.map(<span class="fstat-no" title="function not covered">function(file, done) {</span></span>
-<span class="cstat-no" title="statement not covered">    var filePath = file.path;</span>
-<span class="cstat-no" title="statement not covered">    exports.changed(filePath);</span>
-<span class="cstat-no" title="statement not covered">    done(null, file);</span>
+<span class="cstat-no" title="statement not covered" >  var glr = es.map(<span class="fstat-no" title="function not covered" >function(file, done) {</span></span>
+<span class="cstat-no" title="statement not covered" >    var filePath = file.path;</span>
+<span class="cstat-no" title="statement not covered" >    exports.changed(filePath);</span>
+<span class="cstat-no" title="statement not covered" >    done(null, file);</span>
   });
 &nbsp;
-<span class="cstat-no" title="statement not covered">  if (options.start) <span class="cstat-no" title="statement not covered">exports.listen(options);</span></span>
+<span class="cstat-no" title="statement not covered" >  if (options.start) <span class="cstat-no" title="statement not covered" >exports.listen(options);</span></span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">  return glr;</span>
+<span class="cstat-no" title="statement not covered" >  return glr;</span>
 };
 &nbsp;
 // Note: This is a good way to directly set the settings once throughout
@@ -580,21 +582,21 @@ exports.middleware = minilr.middleware;
  * @param {function} [cb] callback
  */
 &nbsp;
-exports.listen = <span class="fstat-no" title="function not covered">function(opts, cb) {</span>
-<span class="cstat-no" title="statement not covered">  if (exports.server) <span class="cstat-no" title="statement not covered">return;</span></span>
+exports.listen = <span class="fstat-no" title="function not covered" >function(opts, cb) {</span>
+<span class="cstat-no" title="statement not covered" >  if (exports.server) <span class="cstat-no" title="statement not covered" >return;</span></span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">  if (typeof opts === 'number') {</span>
-<span class="cstat-no" title="statement not covered">    opts = { port: opts };</span>
-  } else <span class="cstat-no" title="statement not covered">if (typeof opts === 'function') {</span>
-<span class="cstat-no" title="statement not covered">    cb = opts;</span>
-<span class="cstat-no" title="statement not covered">    opts = {};</span>
+<span class="cstat-no" title="statement not covered" >  if (typeof opts === 'number') {</span>
+<span class="cstat-no" title="statement not covered" >    opts = { port: opts };</span>
+  } else <span class="cstat-no" title="statement not covered" >if (typeof opts === 'function') {</span>
+<span class="cstat-no" title="statement not covered" >    cb = opts;</span>
+<span class="cstat-no" title="statement not covered" >    opts = {};</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered">  options = _assign(options, opts);</span>
-<span class="cstat-no" title="statement not covered">  exports.server = new minilr.Server(options);</span>
-<span class="cstat-no" title="statement not covered">  exports.server.listen(options.port, options.host, <span class="fstat-no" title="function not covered">function() {</span></span>
-<span class="cstat-no" title="statement not covered">    debug('now listening on port %d', options.port);</span>
-<span class="cstat-no" title="statement not covered">    if(typeof cb === 'function') <span class="cstat-no" title="statement not covered">cb.apply(exports.server, arguments);</span></span>
+<span class="cstat-no" title="statement not covered" >  options = _assign(options, opts);</span>
+<span class="cstat-no" title="statement not covered" >  exports.server = new minilr.Server(options);</span>
+<span class="cstat-no" title="statement not covered" >  exports.server.listen(options.port, options.host, <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >    debug('now listening on port %d', options.port);</span>
+<span class="cstat-no" title="statement not covered" >    if(typeof cb === 'function') <span class="cstat-no" title="statement not covered" >cb.apply(exports.server, arguments);</span></span>
   });
 };
 &nbsp;
@@ -609,22 +611,22 @@ exports.listen = <span class="fstat-no" title="function not covered">function(op
  * @param  {string|object} filePath
  */
 &nbsp;
-exports.changed = <span class="fstat-no" title="function not covered">function (filePath) {</span>
-<span class="cstat-no" title="statement not covered">  if (!exports.server) {</span>
-<span class="cstat-no" title="statement not covered">    debug('no server listening, nothing notified.');</span>
-<span class="cstat-no" title="statement not covered">    return;</span>
+exports.changed = <span class="fstat-no" title="function not covered" >function (filePath) {</span>
+<span class="cstat-no" title="statement not covered" >  if (!exports.server) {</span>
+<span class="cstat-no" title="statement not covered" >    debug('no server listening, nothing notified.');</span>
+<span class="cstat-no" title="statement not covered" >    return;</span>
   }
-<span class="cstat-no" title="statement not covered">  if (typeof filePath === 'object') {</span>
-<span class="cstat-no" title="statement not covered">    filePath = filePath.path;</span>
+<span class="cstat-no" title="statement not covered" >  if (typeof filePath === 'object') {</span>
+<span class="cstat-no" title="statement not covered" >    filePath = filePath.path;</span>
   }
-<span class="cstat-no" title="statement not covered">  if (options.basePath) {</span>
-<span class="cstat-no" title="statement not covered">    filePath = '/' + relative(options.basePath, filePath);</span>
+<span class="cstat-no" title="statement not covered" >  if (options.basePath) {</span>
+<span class="cstat-no" title="statement not covered" >    filePath = '/' + relative(options.basePath, filePath);</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered">  exports.server.changed({ body: { files: [ filePath ] } });</span>
+<span class="cstat-no" title="statement not covered" >  exports.server.changed({ body: { files: [ filePath ] } });</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">  if (!options.quiet) {</span>
-<span class="cstat-no" title="statement not covered">    gutil.log(magenta(filePath) + ' reloaded.');</span>
+<span class="cstat-no" title="statement not covered" >  if (!options.quiet) {</span>
+<span class="cstat-no" title="statement not covered" >    gutil.log(magenta(filePath) + ' reloaded.');</span>
   }
 };
 &nbsp;
@@ -637,16 +639,15 @@ exports.changed = <span class="fstat-no" title="function not covered">function (
  *
  * * @param  {string} [filePath]
  */
-exports.reload = <span class="fstat-no" title="function not covered">function(filePath) {</span>
-<span class="cstat-no" title="statement not covered">    exports.changed(filePath || options.reloadPage);</span>
+exports.reload = <span class="fstat-no" title="function not covered" >function(filePath) {</span>
+<span class="cstat-no" title="statement not covered" >    exports.changed(filePath || options.reloadPage);</span>
 };
 &nbsp;
 &nbsp;</pre></td></tr>
-</tbody></table></pre>
+</table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 11 2017 06:29:29 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Sun Apr 16 2017 08:34:20 GMT+0000 (UTC)</div>
 </div>
-
-
-</body></html>
+</body>
+</html>
